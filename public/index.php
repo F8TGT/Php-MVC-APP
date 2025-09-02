@@ -2,8 +2,13 @@
 
 require_once __DIR__ . '/../app/init.php';
 
+$routes = [
+    '' => 'HomeController@index',
+    'testing' => 'TestingController@index@testing',
+];
 
-
-$test = new Test();
-
-var_dump(get_declared_classes());
+if(array_key_exists('', $routes)) {
+    echo "TRUE IT DOES EXIST";
+} else {
+    echo "it does not exist";
+}
