@@ -6,7 +6,11 @@ require_once __DIR__ . '/../routes/web.php';
 $request = isset($_GET['url']) ? rtrim($_GET['url'], '/') : '';
 
 if(array_key_exists($request, $routes)) {
-    echo "TRUE IT DOES EXIST";
+    $route = explode('@', $routes[$request]);
+    $controllerName = $route[0];
+    $methodName = $route[1];
+    $controller = new $controllerName();
+    $controller->index();
 } else {
-    echo "it does not exist";
+    echo "404 - Page not found";
 }
