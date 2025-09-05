@@ -1,0 +1,2 @@
+<h1>THIS IS THE HOMEPAGE</h1>
+<?php
