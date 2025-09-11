@@ -10,7 +10,7 @@ if(array_key_exists($request, $routes)) {
     $controllerName = $route[0];
     $methodName = $route[1];
     $controller = new $controllerName();
-    $controller->index();
+    $controller->$methodName();
 } else {
     echo "404 - Page not found";
 }

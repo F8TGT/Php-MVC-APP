@@ -1,2 +1,7 @@
-<h1>THIS IS THE HOMEPAGE</h1>
-<?php
+<h1>
+    <?php echo $title; ?>
+</h1>
+
+<h2>
+    <?php echo $message; ?>
+</h2>
