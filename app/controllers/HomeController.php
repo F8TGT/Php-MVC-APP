@@ -9,7 +9,7 @@ class HomeController
             'message' => 'Welcome to the Home Page',
         ];
 
-        render('home/index', $data);
+        render('home/index', $data, 'layouts/hero_layout');
     }
 
     public function about()
