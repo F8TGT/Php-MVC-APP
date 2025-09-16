@@ -3,7 +3,7 @@
 //  BASE URL
 function base_url($path = '')
 {
-    if(defined('BASE_URL')) {
+    if (defined('BASE_URL')) {
         return BASE_URL.ltrim($path, '/');
     }
 
@@ -12,6 +12,16 @@ function base_url($path = '')
     $base = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
 
     return $protocol.$host.$base.'/'.ltrim($path, '/');
+}
+
+function base_path($path = '')
+{
+    return realpath(__DIR__.'/../'.'/'.ltrim($path, '/'));
+}
+
+function views_path($path = '')
+{
+    return base_path('app/views/'.ltrim($path, '/'));
 }
 
 function render($view, $data = [], $layout = 'layout')
