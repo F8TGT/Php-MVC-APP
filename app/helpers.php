@@ -24,13 +24,23 @@ function views_path($path = '')
     return base_path('app/views/'.ltrim($path, '/'));
 }
 
+function redirect($path = '', $queryParams = []) {
+    $url = base_url($path);
+    if(!empty($queryParams)) {
+        $url .= '?'.http_build_query($queryParams);
+    }
+
+    header('Location: '.$url);
+    exit();
+}
+
 function render($view, $data = [], $layout = 'layout')
 {
     extract($data);
 
     ob_start();
-    require __DIR__."/views/".$view.".php";
+    require views_path($view.'.php');
     $content = ob_get_clean();
 
-    require __DIR__."/views/".$layout.".php";
+    require views_path($layout.".php");
 }
