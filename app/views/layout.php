@@ -5,8 +5,8 @@
     <title>CMS PDO System</title>
     <!-- Bootstrap CSS -->
     <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-        rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
 
     >
 </head>
@@ -28,7 +28,8 @@ require views_path('partials/home/navbar.php'); ?>
 <!-- Main Content -->
 <main class="container my-5">
 
-    <?php echo $content; ?>
+    <?php
+    echo $content; ?>
 
 </main>
 
@@ -43,7 +44,7 @@ require views_path('partials/home/navbar.php'); ?>
 
 <!-- Bootstrap JS and dependencies -->
 <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
 
 ></script>
 </body>

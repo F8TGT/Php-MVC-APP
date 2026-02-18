@@ -4,9 +4,11 @@ $routes = [
     'GET' => [
         '/' => 'HomeController@index',
         '/about' => 'HomeController@about',
-        '/user/register' => 'UserController@register',
+        '/user/register' => 'UserController@showRegisterForm',
+        '/user/login' => 'UserController@showLoginForm',
     ],
     'POST' => [
-        '/register' => 'UserController@registerUser',
+        '/register' => 'UserController@register',
+        '/login' => 'UserController@loginUser',
     ]
 ];

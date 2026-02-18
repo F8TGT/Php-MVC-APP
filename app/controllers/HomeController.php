@@ -4,6 +4,8 @@ class HomeController
 {
     public function index()
     {
+        $database = Database::getInstance();
+        $database->getConnection();
         $data = [
             'title' => 'Home Page',
             'message' => 'Welcome to the Home Page',
